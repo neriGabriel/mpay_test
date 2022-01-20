@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.mpaywalletapp.presentation.feature.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_cardFragment"
+            app:destination="@id/cardFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_statementFragment"
+            app:destination="@id/statementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardFragment"
+        android:name="com.example.mpaywalletapp.presentation.feature.card.CardFragment"
+        android:label="Cartao"
+        tools:layout="@layout/fragment_card" >
+        <argument
+            android:name="cardId"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/statementFragment"
+        android:name="com.example.mpaywalletapp.presentation.feature.statement.StatementFragment"
+        android:label="Extrato"
+        tools:layout="@layout/fragment_statement" >
+        <argument
+            android:name="statementId"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>

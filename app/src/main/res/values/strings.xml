@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MPayWalletApp</string>
+
+    <string name="title_expiration_date">Expiration</string>
+    <string name="title_limit_available">Limite disponível: </string>
+    <string name="title_limit_total">Limite total: </string>
+    <string name="title_loading_data">Loading data</string>
+</resources>
